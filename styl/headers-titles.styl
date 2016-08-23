@@ -1,0 +1,133 @@
+// HEADERS
+
+section > header
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 4.5rem;
+  position: relative;
+  z-index: 1;
+  
+  & > h1
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin: auto;
+    max-width: 568px;
+    text-transform: uppercase;
+    
+  & > p
+    color: $gray-text;
+    margin: 1.5rem auto 0;
+    max-width: 568px;
+
+section.header-bg
+  background-image: url('images/bg-img.jpg');
+  background-size: cover;
+  
+  & .cover
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  & > header
+    padding-bottom: 9rem;
+    padding-top: 9rem;
+    text-shadow: 0 0 48px black;
+    
+  &.light-green
+    color: $light-green-text-for-dark-bg;
+    & > header > p
+      color: inherit;
+  
+  &.light-blue
+    color: $light-blue-text-for-dark-bg;
+    & > header > p
+      color: inherit;
+  
+  &.pink
+    color: $pink-text-for-dark-bg;
+    & > header > p
+      color: inherit;
+    
+  &.light-purple
+    color: $light-purple-text-for-dark-bg;
+    & > header > p
+      color: inherit;
+
+
+// Section titles
+
+hr
+  border: none;
+  border-top: 1px solid $gray;
+  margin-bottom: 0;
+  max-width: 100%;
+  
+.section-title-in
+.section-title-up
+  padding: 0;
+  
+  & ul
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    & li
+      display: inline-block;
+      padding: 0 0.5rem;
+      
+      & h1
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+        
+  & hr
+    margin: -1px 0 0;
+
+.section-title-in 
+  color: $gray-text;
+  margin: 4.5rem auto 3.5rem;
+  text-align: center;
+  
+  & h1
+    background-color: white;
+    padding: 0 0.75rem;
+
+  & hr
+    max-width: 876px;
+    margin-top: -0.65rem;
+  
+  & span
+    background-color: white;
+    margin-top: -1rem;
+    padding: 0 0.5rem;
+
+.section-title-up
+  color: $gray-text;
+  margin: 2.25rem auto 1.25rem;
+  
+  & ul
+    text-align: left;
+    
+    & li
+      border-bottom: 0.25rem solid transparent;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      
+      &:first-child
+        margin-left: 0;
+      
+      &:last-child
+        margin-right: 0;
+  
+  & .active
+    border-color: $pink;
+    color: $pink-text;
+    
+  &.no-margin
+    margin-bottom: 0;

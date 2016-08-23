@@ -1,0 +1,270 @@
+// CTA
+
+.cta
+  text-align: center;
+  padding: 4.5rem 12px 4rem;
+  margin: 1.5rem 0;
+  
+  &:before
+  &:after
+    content: '';
+    max-width: 876px;
+    height: 1px;
+    background-color: rgba(0,0,0,0.25);
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  
+  &:before
+    top: -4.5rem;
+    
+  &:after
+    bottom: -4rem;
+    
+  & > h1
+  & > p
+    max-width: 568px;
+  
+  & > h1
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
+    
+  & > p
+    color: $gray-text;
+    margin: 0 auto 3rem;
+    
+@media only screen and (min-width: 48em)
+  .cta
+    padding-left: 24px;
+    padding-right: 24px;
+  
+@media only screen and (min-width: 64em)
+  .cta
+    padding-left: 48px;
+    padding-right: 48px;
+    
+.contact-info
+  & .author-info
+  & .btn
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.55rem 1.5rem;
+    
+  & .author-info .name:after
+    display: none;
+    
+.cta
+  &.dark-blue
+    & .btn
+      border-color: $dark-blue;
+      color: $dark-blue;
+
+      &:hover
+        background-color: $dark-blue;
+        
+      &.full
+        background-color: $dark-blue;
+        
+        &:hover
+          color: $dark-blue;
+    
+  &.blue
+    & .btn
+      border-color: $blue;
+      color: $blue;
+    
+      &:hover
+        background-color: $blue;
+        
+      &.full
+        background-color: $blue;
+        
+        &:hover
+          color: $blue;
+        
+  &.dark-purple
+     & .btn
+      border-color: $dark-purple;
+      color: $dark-purple;
+    
+      &:hover
+        background-color: $dark-purple; 
+        
+      &.full
+        background-color: $dark-purple;
+        
+        &:hover
+          color: $dark-purple;
+  
+  &.pink
+    & .btn
+      border-color: $pink;
+      color: $pink-text;
+    
+      &:hover
+        background-color: $pink;
+      
+      &.full
+        background-color: $pink;
+        
+        &:hover
+          color: $pink-text;
+    
+  &.light-purple
+    & .btn
+      border-color: $light-purple;
+      color: $light-purple;
+    
+      &:hover
+        background-color: $light-purple; 
+        
+      &.full
+        background-color: $light-purple;
+        
+        &:hover
+          color: $light-purple;
+    
+  &.green
+    & .btn
+      border-color: $green;
+      color: $green-text;
+    
+      &:hover
+        background-color: $green; 
+        
+      &.full
+        background-color: $green;
+        
+        &:hover
+          color: $green-text;
+
+  &.light-green
+    & .btn
+      border-color: $light-green;
+      color: $light-green-text;
+    
+      &:hover
+        background-color: $light-green-bg;
+        
+      &.full
+        background-color: $light-green;
+        
+        &:hover
+          color: $light-green-text;
+  
+  &.light-blue
+    & .btn
+      border-color: $light-blue;
+      color: $light-blue-text;
+    
+      &:hover
+        background-color: $light-blue-bg;
+        
+      &.full
+        background-color: $light-blue;
+        
+        &:hover
+          color: $light-blue-text;
+      
+  & .btn:hover
+    color: white;
+    
+  & .btn.full
+    color: white;
+    
+    &:hover
+      background-color: transparent;
+        
+.cta.full
+  &:before
+  &:after
+    display: none;
+    
+  &.dark-blue
+  &.dark-purple
+  &.light-purple
+  &.blue
+    & > h1
+    & > p
+    & .btn
+      color: white;
+      opacity: 0.9;
+      font-weight: 300;
+      letter-spacing: 0.01rem;
+      
+    & .author-info
+      letter-spacing: 0.02rem;
+      
+    & h1
+    & .author-info .name
+      font-weight: 600;
+      
+    & .btn
+      color: white;
+      border-color: white;
+    
+      &:hover
+        background-color: white;
+        font-weight: 400;
+        
+  &.pink
+  &.green
+  &.light-green
+  &.light-blue
+    & > p
+      color: rgba(0,0,0,0.65);
+      
+    & .btn
+      color: black;
+      border-color: black;
+      
+      &:hover
+        background-color: black;
+    
+  &.dark-blue
+    background-color: $dark-blue;
+
+    & .btn:hover
+      color: $dark-blue;
+    
+  &.blue
+    background-color: $blue;
+  
+    & .btn:hover
+      color: $blue;
+  
+  &.dark-purple
+    background-color: $dark-purple;
+    
+    & .btn:hover
+      color: $dark-purple;  
+    
+  &.pink
+    background-color: $pink-bg;
+    
+    & .btn:hover
+      color: $pink-text-for-dark-bg;
+    
+  &.light-purple
+    background-color: $light-purple;
+    
+    & .btn:hover
+      color: $light-purple;
+    
+  &.green
+    background-color: $green;
+    
+    & .btn:hover
+      color: $green;
+    
+  &.light-green
+    background-color: $light-green-bg;
+    
+    & .btn:hover
+      color: $light-green-text-for-dark-bg;
+  
+  &.light-blue
+    background-color: $light-blue-bg;
+    
+    & .btn:hover
+      color: $light-blue-text-for-dark-bg;

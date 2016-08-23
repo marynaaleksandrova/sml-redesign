@@ -1,0 +1,308 @@
+.blogpost-page section
+  max-width: 44rem;
+  margin: 0 auto;
+
+.blogpost
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  
+  & h1
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -.03em;
+    font-weight: 400;
+    margin: 0.75em 0 0.75em;
+    
+  & h2
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 1.6em 0 0.8em;
+    
+  & h3
+    font-size: 1.5625rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 2.4em 0 1.2em;
+    
+  & h4
+    font-size: 1.25rem;
+    margin: 3em 0 1.5em;
+
+    
+  & img
+    line-height: 1;
+    margin-bottom: -0.2rem;
+    width: 100%;
+    
+  & p
+    margin: 1.5em 0;
+
+  & a
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    transition: 300ms;
+    
+    &:hover
+      color: $dark-blue;
+      border-bottom-color: $dark-blue;
+      
+  & code
+    background-color: $light-gray;
+    padding: 0 2px;
+    border: 1px solid $light-gray;
+    font-size: 0.9em;
+    color: black;
+    white-space: nowrap;
+    line-height: 1.5;
+    border-radius: 2px;
+    
+  & pre code
+    white-space: pre;
+    border: none;
+    background-color: transparent;
+
+  & pre
+    white-space: pre;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: $light-gray;
+    padding: 0.5rem;
+    border: 1px solid $light-gray;
+    border-radius: 2px;
+    margin: 1.5em 0 1.35em;
+    
+  & blockquote
+    color: $dark-purple;
+    font-style: italic;
+    border-left: 0.5rem solid $dark-purple;
+    margin: 1.5rem 0 1.5rem -12px;
+    padding-left: 1.5rem;
+    
+  & ul
+  & ol
+    padding-left: 1.5rem;
+    
+    & li
+      margin-bottom: 0.9375rem;
+      
+  & iframe
+    width: 100%important;
+    max-width: 100%important;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  
+  & .table-wrapper
+    width: 100%;
+    overflow-x: auto;
+
+  & table
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    
+  & tbody
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    
+  & tr
+    border-top: 1px solid #bfbfbf;
+    
+  & tbody tr:nth-child(odd)
+    background-color: $light-gray;
+    
+  & td
+  & th
+    padding: 0.5rem;
+    
+.social-share
+  line-height: 1;
+  min-height: 22px;
+  margin: 1.05rem 0 4rem;
+  
+  & .twitter-share-btn
+  & .facebook-share-btn
+  & .linkedin-share-btn
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0.25rem;
+    min-width: 60px;
+    text-decoration: none;
+    color: black;
+    
+    &:first-child
+      margin-left: 0;
+      
+    &:last-child
+      margin-right: 0;
+      
+.next-post
+.previous-post
+  display: block;
+  border: 1px solid $pink;
+  color: $pink-text;
+  text-decoration: none;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 10rem;
+  position: relative;
+  transition: all 300ms;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  
+  &:after
+    content:"";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-right: 1px solid $pink-text;
+    border-bottom: 1px solid $pink-text;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -.75rem;
+  
+  & span
+    display: block;
+    color: $gray-text;
+    text-transform: uppercase;
+    letter-spacing: 0.015rem;
+    margin-bottom: 0.25rem;
+    
+  &:hover
+    background-color: $pink;
+    color: white;
+    
+    &:after
+      border-color: white;
+    
+.next-post
+  padding-right: 3rem;
+
+  &:after
+    transform: rotate(-45deg);
+    right: 1.25rem;
+    
+.previous-post
+  padding-left: 3rem;
+
+  &:after
+    transform: rotate(135deg);
+    left: 1.25rem;
+    
+.related-posts
+  margin: 4.5rem 0;
+  
+.comments
+  margin: 4.5rem 0;
+  
+
+@media only screen and (min-width: 48em)
+  .blog-post
+    font-size: 1.25rem;
+    
+    & pre
+      padding: 1rem;
+      
+    & .v-img
+      max-width: 40%;
+      float: left;
+      margin-right: 1.5rem;
+      
+    & blockquote
+      margin-left: 0;
+      padding: 0 2rem;
+      font-size: 0.9em;
+      
+  .next-post
+  .previous-post
+    max-width: 18rem;
+    width: auto;
+    
+  .next-post
+    float: right;
+    
+  .previous-post
+    float: left;
+    
+  .related-posts .blog-item
+    padding: 0 12px;
+    
+    &:first-child
+      padding-left: 0;
+      
+    &:last-child
+      padding-right: 0;
+      
+  .blogpost 
+    & .v-img
+      max-width: 40%;
+      float: left;
+      margin: 0.5rem 1.5rem 0.5rem 0;
+      
+    & blockquote
+      margin: 1.5rem 1rem 1.5rem 0;
+
+
+@media only screen and (min-width: 64em)
+  .next-post
+  .previous-post
+    width: 4.875rem;
+    height: 4.875rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    margin-top: -2.4375rem;
+    border-color: $gray;
+    color: transparent;
+    overflow: hidden;
+    transition: width 500ms, color 200ms, border-color 250ms, background-color 200ms;
+    
+    & span
+      color: transparent;
+      transition: color 300ms;
+    
+    &:after
+      border-color: $gray;
+      transition: border-color 250ms;
+      
+    &:hover
+      width: 18rem;
+      background-color: white;
+      color: $pink-text;
+      border-color: $pink;
+      
+      & span
+        color: $gray-text;
+      
+      &:after
+        border-color: $pink-text;
+    
+  .next-post
+    right: 48px;
+    padding-right: 3.875rem;
+    
+    &:after
+      right: 1.9rem;
+    
+  .previous-post
+    left: 48px;
+    padding-left: 3.875rem;
+    
+    &:after
+      left: 1.9rem;
+    
+  .social-share
+    margin-bottom: 0;
+    
+
+
+
+
+
+

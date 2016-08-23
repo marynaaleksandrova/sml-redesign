@@ -1,0 +1,130 @@
+@import "normalize.min.css"
+@import "nib"
+
+// BREAKPOINTS
+
+// screen and (min-width: 48em);
+// screen and (min-width: 48em) and (max-width: 64em);
+// screen and (min-width: 64em);
+
+
+@import "colors.styl"
+
+@import "grids.styl"
+
+code
+  color: #018749;
+  font-weight: normal;
+  line-height: 1.4;
+
+h1.utility-title,
+h2.utility-title,
+h3.utility-title,
+h4.utility-title,
+h5.utility-title,
+h6.utility-title
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.47rem;
+  margin-top: 1.47rem;
+  
+.utility-code
+  background-color: $light-gray;
+  border-radius: 2px;
+  border: 1px solid $gray;
+  color: $gray-text;
+  margin: 0.5rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+
+pre
+  line-height: 1.5;
+  margin: 1.455rem 0;
+
+img
+  max-width: 100%;
+
+a:hover
+  color: $dark-blue;
+
+a[href*="//"]:not([href*="localhost:8001"]):after
+  //  content: '*';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: yellow!important;
+
+body
+  background-image: url("images/bg.jpg");
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  
+body > section,
+.section-divider
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow-x: hidden;
+
+@media only screen and (min-width: 48em) and (max-width: 64em)
+  body > section,
+  .section-divider
+    padding-left: 24px;
+    padding-right: 24px;
+  
+@media only screen and (min-width: 64em)
+  body > section,
+  .section-divider
+    padding-left: 48px;
+    padding-right: 48px;
+    
+section
+  position: relative;    
+  
+.desc
+  font-size: 0.875rem;
+  color: $gray-text;
+  
+.centered
+  text-align: center;
+
+@import "headers-titles.styl"
+
+@import "buttons.styl"
+        
+@import "horizontal-scroll.styl"
+
+@import "tags.styl"
+      
+@import "directory-vertical.styl"
+
+@import "author-info.styl"
+    
+@import "blog-item.styl"
+  
+@import "events-calendar.styl"
+  
+@import "cta.styl"
+
+.social-btn-circle
+  border: 1px solid $gray;
+  border-radius: 12px;
+  display: inline-block;
+  height: 24px;
+  margin: 0 .125rem;
+  vertical-align: bottom;
+  width: 24px;
+  
+@import "portfolio.styl"
+  
+@import "os.styl"
+
+@import "blog-post.styl"
+    
+@import "very-specific-css.styl"
+    
+    
+    
+  
+
+    

@@ -1,0 +1,46 @@
+// Directories vertical
+
+.directory ul
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  
+  & li
+    line-height: 1.5;
+
+.directory.vertical
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  border-bottom: 1px solid $gray;
+  
+  & li
+    text-overflow: ellipsis;
+    padding-right: 1rem;
+    max-width: 85%;
+    box-sizing: border-box;
+    white-space: nowrap;
+  
+    &:first-child
+      margin-top: 0.37rem;
+    
+    &:last-child
+      margin-bottom: 0.37rem;
+      
+    & .tag
+    & .btn
+    & .desc
+      overflow: hidden;
+      text-overflow: inherit;
+      max-width: 100%;
+      
+    & .desc
+      white-space: nowrap;
+      margin: 0 0 0.95rem 1rem;
+      
+.author-tags .tag
+  margin: .37rem 0.5rem .1rem 0;
+
+  &:hover
+    background-color: $light-blue-bg;

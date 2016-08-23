@@ -1,0 +1,23 @@
+// Horizontal scroll
+
+.horizontal ul
+ul.horizontal
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  overflow-y: hidden;
+      
+  & li
+    display: inline-block;
+    line-height: 1.5;
+    
+    &:last-child > *
+      margin-right: 0;
+      
+.horizontal.scroll
+ul.horizontal.scroll
+  overflow-x: auto;
+  white-space: nowrap;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;

@@ -1,0 +1,94 @@
+// Tags
+
+.tag
+  display: inline-block;
+  border-radius: 2px;
+  background-color: $light-gray;
+  color: $gray-text;
+  line-height: 1.5;
+  text-decoration: none;
+  padding: 0 0.75rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+  transition: all 250ms;
+  
+  &:hover
+    background-color: $gray;
+    color: $dark-gray;
+    
+  &.technology:hover
+    background-color: $light-green-bg;
+  
+  &.category:hover
+    background-color: $light-blue-bg;
+    
+  &.industry:hover
+    background-color: $light-purple;
+    color: white;
+
+
+.trending
+  position: relative;
+  color: $gray-text;
+  padding: 0.95rem 0 0;
+  border-bottom: 1px solid $gray;
+  line-height: 1;
+  
+  &:after
+    background: linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    bottom: 16px;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+
+  &:before
+    background: linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    bottom: 16px;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+  
+  & ul
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    padding: 0 12px 0.65rem 12px;
+      
+  & .tag:hover
+    background-color: $light-green-bg;
+  
+  & .label
+    display: none;
+
+@media only screen and (min-width: 48em)
+  .trending
+    padding-left: 104px;
+    
+    &:before
+      left: 104px;
+      
+    &:after
+      width: 30px;
+    
+    & ul
+      padding-right: 24px;
+    
+    & .label
+      display: block;
+      position: absolute;
+      top: 1.65rem;
+      left: 24px;
+
+@media only screen and (min-width: 64em)
+  .trending
+    padding-left: 139px;
+    
+    &:before
+      left: 139px;
+    
+    & .label
+      left: 48px;

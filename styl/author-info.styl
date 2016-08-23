@@ -1,0 +1,96 @@
+// AUTHOR INFO
+
+.author-info
+  color: $gray-text;
+  line-height: 1.15;
+  text-align: left;
+  
+  & .avatar
+  & .author
+    display: inline-block;
+    vertical-align: middle;
+    
+  & .avatar
+    overflow: hidden;
+    
+  & .name
+    color: $dark-gray;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: none;  
+  
+  & .position
+    margin: 0;
+    
+  & .social
+    white-space: nowrap;
+     
+    & a
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid $gray;
+      margin: 0 0.25rem -6px 0;
+      padding: 0;
+      cursor: pointer;
+      
+      &:hover
+        border-bottom-color: $gray;
+  
+  &.large
+    margin-bottom: 2.25rem;
+    
+.avatar.small
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  overflow: hidden;
+  
+.avatar.large
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+  overflow: hidden;
+    
+.author > *:after
+  color: $gray-text;
+  content: '\00B7';
+  font-weight: 400;
+  margin: 0 .125rem;
+  
+.author > *:last-child:after
+  content: "";
+    
+// Author info large
+
+.author-info.large
+  padding-left: 80px;
+  
+  & .avatar
+    margin: 0 12px 0 -84px;
+    
+// Author info small
+  
+.author-info.small
+  padding-left: 46px;
+
+  & .avatar
+    margin: 0 10px 0 -48px;
+    
+.author-info.large .author br
+  display: none;
+    
+
+@media only screen and (min-width: 48em)
+  .author-info.large .author br
+    display: block;
+    
+  .author-info.large .social:after
+    display: none;
+  
+  .author-info.large .author > *:after
+    margin: 0 .35rem;
+    
+  .author-info .social a
+    margin-right: 0.35rem;

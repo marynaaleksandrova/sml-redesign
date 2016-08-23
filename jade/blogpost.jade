@@ -1,0 +1,249 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&subset=latin-ext", rel="stylesheet")
+    link(rel="stylesheet", href="index.css")
+  body.blogpost-page
+    header
+
+    section
+
+      div.author-info.large
+          div.avatar.large
+            img(src="images/kunicki.jpg")
+          div.author
+            a.name(href="") Maryna&nbsp;Aleksandrova
+            wbr
+            span.position Software Wizard
+            wbr
+            span.social
+              a(href="#").twitter
+              a(href="#").github
+              a(href="#").linkedin
+            wbr
+            br
+            span.date 7&nbsp;June&nbsp;2016
+            wbr
+            span.time-to-read 5&nbsp;min&nbsp;read
+
+      div.blogpost
+        h1 Kafka Streams - how does it fit the stream processing landscape?
+        p A table, on the other hand, is a 
+          em changelog
+          | . If the table contains a key-value pair for the same key twice, the latter overwrites the mapping. For example, a table of user addresses with 
+          code alice -&gt; new york
+          | , 
+          code bob -&gt; san francisco
+          |, 
+          code alice -&gt; chicago
+          |    means that Alice moved from 
+          a(href="#") New York
+          |   to Chicago, not that she lives at both places in the same time.
+        pre
+          code.
+            case class MyEvent(timestamp: Long)
+
+            val myEventStream = Source
+              .tick(0.seconds, 1.second, "")
+              .map { _ =&gt;
+                val now = System.currentTimeMillis()
+                val delay = random.nextInt(8)
+                MyEvent(now - delay * 1000L)
+              }
+        h2 Away from keyboard status
+        p There is almost nothing more irritating than describing a complicated problem to developers in your team for a few minutes only to notice that all of them are away from their computers.
+        h3 Other small things
+        p Thanks to Ruben Gerits it is possible now to define teams and manage members of the teams inside Codebrag.
+        img(src="images/vert-image.jpeg").v-img
+        p The most annoying thing for me, when I was joining a new project where Codebrag was used, it was too many commits to review on the beginning. It was not possible to mark all commits as reviewed at once and you have had to mark them one by one spending a lot of time on this useless activity ;-)
+        p ScalaSphere by VirtusLab happened well over one-and-a-half months ago, so it's high time for some sort of summary.
+        p A "DevTools Summit" is an uncommon theme for a conference. Typically, tooling presentation given during programming-related events focus on the "shiny-shiny", i.e. user-facing, prominent features. ScalaSphere aimed at providing a more holistic view of various tools, featuring a pronounced focus on the tool developer's perspective.
+        h4 Dev tools
+        p Before we get into the details, let me dispel a probable misconception about the subject matter - in the context of topics presented, "tools" was not a synonym for "IDEs". Rather, the talks covered a wide variety of meta level technologies and concepts, from learning environments, through IDEs, to license models.
+        img(src="images/hor-image.jpeg").h-img
+        p The agenda can be found on the conference's website (along with slides and recordings). That being given, I will list several subjectively more intriguing highlights.
+        blockquote Matthias Langer shared his experiences during The Scala Refactoring Library: Problems and Perspectives, providing a very representative set of examples of problems that refactoring lib developer must deal with, especially in a language as syntactically and semantically complex as Scala.
+        p Eugene Burmako's immediately following up What we learned in scala.meta? tied in nicely with the theme of its predecessor, going down to the language design level. Included was a very valuable discussion of various problems that crop up when dealing with the high (syntactic sugar)/low level representation mismatch:
+        ol
+          li Rory Graves
+          li Scalanator.io
+          li Building
+        p Training platform on compiler tools, had announced a new Scala learning tool initiative. Apart from said announcement, the talk included an interesting overview of design and implementation choices during the creation of such a platform.
+        ul
+          li Sam Halliday refreshed everyone's memory on the oft-neglected topic       of OS licensing in How to be Free, Libre and Open Source. 
+          li The talk also discussed several important legal aspects of various licensing schemes, so if you just spam GPL or BSD into your projects, I very much recommend taking a look at it (even forgiving being coerced       to speak German).
+          li Lukas Wegmann's Scaps – Type-directed API Search for Scala is still in          the early stages of development, but looks very promising in the              context of addressing Scala's perennial problem of API discoverability.
+        p Alexandre Archambault presented his Scala-native tool in Easy dependency management with coursier. The improved resolution features, and the impressive processing speed were certainly a sight to behold.
+        iframe(width="560", height="315", src="https://www.youtube.com/embed/dY2Rru5f-O4", frameborder="0", allowfullscreen)
+        p Alexandre Archambault presented his Scala-native tool in Easy dependency management with coursier. The improved resolution features, and the impressive processing speed were certainly a sight to behold.
+        div.table-wrapper
+          table
+            thead
+              tr
+                th Engine       
+                th Threads       
+                th Nodes      
+                th Send msgs/s        
+                th Receive msgs/s
+            tbody
+              tr
+                td mmap
+                td 1         
+                td 1            
+                td 7 242      
+                td 1 601    
+              tr
+                td mmap        
+                td 5         
+                td 1          
+                td 10 687     
+                td
+                  strong 2 761   
+              tr
+                td mmap  
+                td 1         
+                td 2           
+                td 8 928       
+                td 2 426    
+              tr
+                td mmap        
+                td 5         
+                td 2            
+                td
+                  strong 10 963
+                td 2 673
+              tr
+                td wired tiger
+                td 1  
+                td 1       
+                td 4 409      
+                td
+                  strong 1 145
+        p Alexandre Archambault presented his Scala-native tool in Easy dependency management with coursier. The improved resolution features, and the impressive processing speed were certainly a sight to behold.
+
+      div.horizontal
+        ul
+          li
+            a.tag.technology(href="#") Scala
+          li
+            a.tag.technology(href="#") Play
+          li
+            a.tag.technology(href="#") Slick
+          li
+            a.tag.technology(href="#") H2
+          li
+            a.tag.technology(href="#") AngularJS
+
+      div.social-share
+
+        div.twitter-share-btn
+          a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Hello%20world") Tweet
+
+        div.facebook-share-btn
+          div.fb-share-button(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button", data-size="small", data-mobile-iframe="true")
+            a.fb-xfbml-parse-ignore(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse") Share
+
+        div.linkedin-share-btn
+          script(type="IN/Share", data-url="https://softwaremill.com/") 
+
+      div.row
+        a.next-post(href="#") 
+          span Next post: 
+          | IT conferences Call For Papers list
+
+        a.previous-post(href="#") 
+          span Previous post: 
+          | Kafka, Scala, Play frameworks
+
+      div.related-posts
+        header.section-title-up
+          ul
+            li
+              h1 Related posts
+          hr
+
+        ul.row
+          li.blog-item.md-col-1-2
+            div.author-info.small
+              div.avatar.small
+                img(src="images/kunicki.jpg")
+              div.author
+                a.name(href="") Maryna&nbsp;Aleksandrova
+                wbr
+                span.date 7&nbsp;June&nbsp;2016
+                wbr
+                span.time-to-read 5&nbsp;min&nbsp;read
+            a(href="#")
+              h1 Cooperation with an external software house.
+              p.excerpt What is most important in cooperation with external software developers? What questions should be...
+            a.btn(href="#") Read more
+
+          li.blog-item.md-col-1-2
+            div.author-info.small
+              div.avatar.small
+                img(src="images/kunicki.jpg")
+              div.author
+                a.name(href="") Maryna&nbsp;Aleksandrova
+                wbr
+                span.date 7&nbsp;June&nbsp;2016
+                wbr
+                span.time-to-read 5&nbsp;min&nbsp;read
+            a(href="#")
+              h1 Cooperation with an external software house.
+              p.excerpt What is most important in cooperation with external software developers? What questions should be asked before making the decision?
+            a.btn(href="#") Read more
+
+
+      div.comments
+        div#disqus_thread
+        script.
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = '//sml-11.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+
+        noscript Please enable JavaScript to view the 
+          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+
+    script.
+      window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+        return t;
+      }(document, "script", "twitter-wjs"));
+
+    div#fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    script(src="//platform.linkedin.com/in.js", type="text/javascript") lang: en_US
+
+
+                                  
